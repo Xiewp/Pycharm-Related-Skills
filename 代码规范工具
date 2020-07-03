@@ -1,0 +1,17 @@
+PEP 8，Style Guide for Python Code，是Python官方推出编码约定，主要是为了保证 Python 编码的风格一致，提高代码的可读性。
+
+Autopep8是自动将Python代码格式化为符合PEP 8风格的工具。它使用pycodestyle工具来确定代码的哪些部分需要被格式化。Autopep8能够修复大部分pycodestyle检测的格式问题。
+
+1.下载安装autopep8：
+  pip install autopep8
+2.使用方式：
+  --命令行使用方式
+    autopep8 --in-place --aggressive <filename>
+    （其中   <filename>   替换为自己想要规范代码的文件，比如 test.py ）
+  --Pycharm配置autopep8
+    打开Pycharm，依次打开  "File" --> "Settings..." --> "Tools" --> "External Tools"
+    然后点击 "External Tools" 的 "+", 会出现一个 "Create Tool" 窗口，在 "Name" 一栏输入自己定义的拓展工具名，这里设置为"autopep8"
+    接着在 "Program" 一栏输入安装的autopep8.exe的完整路径，如  D:\pycharm_test\venv\Scripts\autopep8.exe
+    然后在 "Arguments" 一栏输入想要应用的py文件，如 --in-place --aggressive D:\pycharm_test\test.py
+    最后在 "Working directory" 一栏中输入整个Pycharm的工程，如 D:\pycharm_test
+    点击 OK 之后，回到Pycharm选中自己想要调整的代码块，右键"External Tools"之后点击自己定义的"autopep8"就可以得到规范的代码了。
